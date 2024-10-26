@@ -10,28 +10,7 @@ The game uses a `3x3` grid with three possible cell states:
 - Empty (None)
 
 # Game Tree Visualization
-```mermaid
-graph TB
-    A[Initial State<br/>Empty Board] --> B[X's Turn<br/>Top Left]
-    A --> C[X's Turn<br/>Center]
-    A --> D[X's Turn<br/>Other Positions...]
-    
-    B --> E[O's Turn<br/>Various Positions]
-    C --> F[O's Turn<br/>Various Positions]
-    
-    subgraph "Game Board States"
-        direction TB
-        Board1["|_|_|_|<br/>|_|_|_|<br/>|_|_|_|"]
-        Board2["|X|_|_|<br/>|_|_|_|<br/>|_|_|_|"]
-        Board3["|X|_|_|<br/>|_|O|_|<br/>|_|_|_|"]
-    end
-
-    subgraph "Terminal States"
-        Win["+1<br/>X Wins"]
-        Lose["-1<br/>O Wins"]
-        Draw["0<br/>Draw"]
-    end
-   ```
+![Tree](screenshots/tree.png)
 
 # Core Game Logic Components
 ## 1. Board State Management
